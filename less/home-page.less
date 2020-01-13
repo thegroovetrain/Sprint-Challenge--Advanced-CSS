@@ -4,6 +4,11 @@
 
   .intro {
 
+    .banner {
+      .round-borders(0.5rem);
+      width: 100%;
+    }
+
     h2 {
       padding: 15px;
     }
@@ -24,6 +29,15 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @phone {
+      .blast {
+        width: 100%;
+      }
+      .sky, .launch {
+        display: none;
+      }
     }
   }
 
@@ -46,6 +60,11 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      padding-top: 1.6rem;
+    }
+
     .walk-text {
       width: 50%;
 
@@ -58,6 +77,12 @@
       }
 
       .btn {
+        .button;
+      }
+
+      @media @phone {
+        width: 100%;
+        margin-top: 1.6rem;
       }
     }
 
@@ -69,6 +94,11 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+      
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
       }
     }
   }

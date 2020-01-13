@@ -1,1 +1,29 @@
-// Mixins Here
+.flexbox (@justify-content: flex-start, @align-items: stretch) {
+    display: flex;
+    justify-content: @justify-content;
+    align-items: @align-items;
+}
+
+.round-borders(@radius: 1rem) {
+    border-radius: @radius;
+}
+
+.button(@background: @btn-bg-color, @color: white) {
+    background: @background;
+    display: inline-block;
+    color: @color;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    .round-borders(0.5rem);
+
+    &:hover {
+        background: @color;
+        color: @background;
+    }
+
+    @media @phone {
+        display: block;
+        text-align: center;
+    }
+}

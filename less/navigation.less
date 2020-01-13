@@ -1,1 +1,25 @@
-// Navigation code here
+.header {
+    background: @wild-sand;
+    padding: 1rem;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.nav {
+    .flexbox(center, center);
+
+    &__item {
+        padding: 0 1.5rem;
+    }
+
+    &__link {
+        color: @ebony-clay;
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
+}
