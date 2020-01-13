@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+The answer you want is that adaptive layouts utilize different fixed layouts at specific breakpoints, while responsive layouts utilize responsive units and accomodate nearly every possible display. I think this is just splitting hairs. An adaptive layout is responsive, just not as responsive as it could be.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile-first is building and styling for mobile and then using media queries to adjust for larger breakpoints. Desktop first is the opposite of that.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+It effectively scales rem units to pixels at a 1:1 ratio. It also treats any user that manually sets their own preferred default font sizes for whatever reason like they don't know what they are doing. Anyone that seriously does this in a production environment is lazy because it can potentially introduce issues to an edge case of end users. I judge you when you do this. 
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessors add extra features that don't exist in native CSS, like nesting, mixins and functions. Some people like to argue that variables belong in this list, but they exist in CSS natively now and in most cases you should be using those because they play better with javascript at run-time. Some people also like to argue that preprocessors add math, but this is also wrong, because native css has calc, and calc can mix units (i.e. 100% - 3px) which most preprocessors can NOT do, so don't use them for that either. They are tools, not a replacement.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+Mixins/Functions are probably the most useful preprocessor features for me, and are probably not coming to CSS anytime soon (@apply has been deprecated from the working draft). I've been using SASS/SCSS for years (though I prefer native css) so nothing really gives me trouble, although if I had to pick something it is not falling into lazy patterns because preprocessors are just tools and not an excuse for writing bad css.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
